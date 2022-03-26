@@ -13,7 +13,7 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (error) {
-      setShowAlter(true);
+      setShowAlert(true);
     } else {
       setShowAlert(false);
     }
