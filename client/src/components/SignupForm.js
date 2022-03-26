@@ -1,4 +1,4 @@
-import React, { useState, Use Effect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client'
 import { ADD_USER } from '../utils/mutations';
@@ -18,7 +18,7 @@ const SignupForm = () => {
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
-  useEffects(() => {
+  useEffect(() => {
     if (error) {
       setShowAlert(true);
     } else {
