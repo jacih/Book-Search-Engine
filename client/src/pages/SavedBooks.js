@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 import Auth from '../utils/auth';
-import { removeBookId, saveBookIds } from '../utils/localStorage';
+import { removeBookId } from '../utils/localStorage';
 import { GET_ME } from '../utils/queries';
 import { DELETE_BOOK } from '../utils/mutations';
 
@@ -12,9 +12,6 @@ const SavedBooks = () => {
   const userData = data?.me || [];
 
   const [deleteBook, { error }] = useMutation(DELETE_BOOK);
-
-  // use this to determine if `useEffect()` hook needs to run again
-  const userDataLength = Object.keys(userData).length;
 
   // create function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
@@ -25,11 +22,11 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await deleteBook({
-        variables: { bookId: bookId }
+      await deleteBook({
+        variables: { bookId }
       });
 
-      if (!response) {
+      if (error) {
         throw new Error('something went wrong!');
       }
 
@@ -41,13 +38,10 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
-
-  const savedBookIds = userData.savedBooks.map((book) => book.bookId);
-  saveBookIds(savedBookIds);
-
+  
   return (
     <>
       <Jumbotron fluid className='text-light bg-dark'>

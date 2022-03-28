@@ -5,8 +5,8 @@ import './index.css';
 import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.UseStrict>
     <App />
-  </React.StrictMode>,
+  </React.UseStrict>,
   document.getElementById('root')
 );

@@ -13,9 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "@apollo/react-hooks": "^4.0.0"
-  },
   "devDependencies": {
     "concurrently": "^5.1.0"
   }
