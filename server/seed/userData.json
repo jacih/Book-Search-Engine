@@ -1,27 +1,27 @@
 [
-  {
-    "username": "Aubert Leroux",
-    "email": "aubert.leroux@techfriends.dev",
-    "password": "t37hi301!"
-  },
-  {
-    "username": "Elena Bellamy",
-    "email": "el_bellamy@techfriends.dev",
-    "password": "t37hi302!"
-  },
-  {
-    "username": "Ronit Tatum",
-    "email": "tatum.rf@techfriends.dev",
-    "password": "t37hi303!"
-  },
-  {
-    "username": "Alhassan Ilbert",
-    "email": "alhassan.i.ilbert@techfriends.dev",
-    "password": "t37hi304!"
-  },
-  {
-    "username": "Hillevi De Vitis",
-    "email": "hill_deVit@techfriends.dev",
-    "password": "t37hi305!"
-  }
-]
+    {
+      "username": "Aubert Leroux",
+      "email": "aubert.leroux@techfriends.dev",
+      "password": "t37hi301!"
+    },
+    {
+      "username": "Elena Bellamy",
+      "email": "el_bellamy@techfriends.dev",
+      "password": "t37hi302!"
+    },
+    {
+      "username": "Ronit Tatum",
+      "email": "tatum.rf@techfriends.dev",
+      "password": "t37hi303!"
+    },
+    {
+      "username": "Alhassan Ilbert",
+      "email": "alhassan.i.ilbert@techfriends.dev",
+      "password": "t37hi304!"
+    },
+    {
+      "username": "Hillevi De Vitis",
+      "email": "hill_deVit@techfriends.dev",
+      "password": "t37hi305!"
+    }
+  ]
